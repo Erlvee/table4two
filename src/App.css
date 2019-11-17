@@ -1,0 +1,549 @@
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  
+}
+
+
+body {
+  height: 100%;
+  margin: 0;
+  color: black;
+}
+
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  margin: 0;
+  
+  background-color: whitesmoke;
+  /*background-image: url("C:/Users/erlend/reactTutorialFiles/INFO212-prototype/src/img/placeholderBackground.PNG");*/
+  color: #312C2C;
+  font-family: "Arial", "Sans-serif";
+}
+
+.Footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  color: white;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-header {
+  background-color: "red";
+  height: 0.9em;
+  margin: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+/* ------------- LOGIN SCREEN CSS --------------------*/
+.logo {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Login {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+  color: #312C2C;
+}
+
+.input:focus {
+  border: 2px solid #312C2C;
+}
+
+ /* Style the form - display items horizontally */
+
+/* Add some margins for each label */
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+/* Style the input fields */
+.Login input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.userName {
+  height: 25px;
+}
+
+.passWord {
+  margin-top: 1em;
+  height: 25px;
+}
+
+.checkbox {
+  margin-top: 1.5em;
+  transform: scale(1.2)
+}
+
+/* Style the submit button */
+.subButton {
+  font-weight: bold;
+  margin-top: 1.5em;
+  font-size: 17px;
+  padding: 10px 63px;
+  background: orange linear-gradient(orange,#ff8c00);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: white;
+}
+
+.button:hover {
+  background-color: royalblue;
+}
+
+.facebookLogin {
+  margin-top: -0.5em;
+}
+
+.googleLogin {
+  margin-top: 0.5em;
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/*-----------------MainContent-------------------*/
+
+.searchBox {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBox input{
+  margin-bottom: 1em;
+  padding: 6px;
+  margin-top: 1em;
+  font-size: 17px;
+  border: 1px solid #ddd;
+  border-radius: 10px 0 0 10px;
+}
+
+.searchButton {
+  padding: 7px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #2C4760;
+  font-size: 17px;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  
+  cursor: pointer;
+}
+
+.fa-search {
+  color:white;
+  
+}
+
+.searchButton:hover {
+  background: #ccc;
+}
+
+.searchResultBtn {
+  margin-top: 0;
+}
+
+.searchResultBtn button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 0.5em;
+  font-size: 17px;
+  height: 50px;
+  width: 250px;
+  background:  orange linear-gradient(orange,#ff8c00);
+  border: 1px solid #ddd;
+  opacity: 0.75;
+  color: white;
+  font-size: 2;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+#mapBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+#mapBtn button {
+  padding: 12px 18px 12px 18px;
+  border-radius: 10px;
+  background: #2C4760;
+  border: 1px solid #ddd;
+}
+#mapBtn button:hover {
+  background: #ccc;
+}
+
+.fa-map-marker {
+  color: white;
+}
+
+/*-----------------------------RestaurantComponent-----------------*/
+
+.renderRest{
+  max-height: 35em;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;
+}
+
+.Restaurant {
+  grid-template-columns: auto auto auto;
+  display: grid;
+  justify-content: space-evenly;
+  gap: normal;
+}
+
+.Restaurant .resImg {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.Restaurant h4{
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.Restaurant p {
+  margin-top: 0;
+}
+
+.Restaurant .rDescription {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: -12px;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.rating {
+  font-size: 12px;
+}
+
+.avalability-btn {
+  margin-top:0.25em;
+  height: 90%;
+  width: 6em;
+  background: gainsboro;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: gray;
+}
+
+
+
+/*.Restaurant {
+  display: grid;
+  flex-flow: row wrap;
+  flex-direction: column;
+}
+
+.Restaurant img {
+  margin-left: 25px;
+}
+
+.Restaurant h4 {
+  margin-left: 25px;
+  margin-top: 0;
+  float:left;
+}
+
+.Restaurant p {
+  margin-left: 25px;
+  margin-top: -20px
+}
+
+.Restaurant .rating {
+  font-size:12px;
+  margin-bottom: 17px;
+}
+*/
+
+/*-------------------------CALENDAR---------------------*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+.icon {
+font-family: 'Material Icons', serif;
+font-style: normal;
+display: inline-block;
+vertical-align: middle;
+line-height: 1;
+text-transform: none;
+letter-spacing: normal;
+word-wrap: normal;
+white-space: nowrap;
+direction: ltr;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+font-feature-settings: 'liga';
+}
+/* GENERAL */
+* {
+box-sizing: border-box;
+}
+
+header {
+display: block;
+width: 100%;
+padding: 1.75em 0;
+border-bottom: 1px solid lightgray;
+background: white;
+}
+/* GRID */
+.row {
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+}
+.row-middle {
+align-items: center;
+}
+.column {
+flex-grow: 1;
+flex-basis: 0;
+max-width: 100%;
+}
+/* Calendar */
+.calendar {
+display: block;
+position: relative;
+width: 90%;
+background: white;
+border: 1px solid lightgray;
+height: auto;
+margin:0 auto;
+}
+.calendar .header {
+background: rgb(71, 117, 209, 0.8);
+color: white;
+text-align: center;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 115%;
+padding: 1.5em 0;
+border-bottom: 1px solid lightgray;
+}
+.calendar .header .icon {
+cursor: pointer;
+transition: .15s ease-out;
+}
+.calendar .header .icon:hover {
+transform: scale(1.75);
+transition: .25s ease-out;
+color: dodgerblue;
+}
+.calendar .header .icon:first-of-type {
+margin-left: 1em;
+}
+.calendar .header .icon:last-of-type {
+margin-right: 1em;
+}
+.calendar .days {
+margin-left: 2px;
+text-transform: uppercase;
+font-weight: 400;
+color: black;
+font-size: 70%;
+padding: .75em 0;
+border-bottom: 1px solid lightgray;
+}
+.calendar .body .cell {
+position: relative;
+height: 4em;
+border-right: 1px solid lightgray;
+overflow: hidden;
+cursor: pointer;
+background: white;
+transition: 0.25s ease-out;
+}
+.calendar .body .cell:hover {
+background: whitesmoke;
+transition: 0.5s ease-out;
+}
+
+.calendar .body .selected {
+background: "green";
+}
+.calendar .body .row {
+border-bottom: 1px solid lightgray;
+}
+.calendar .body .row:last-child {
+border-bottom: none;
+}
+.calendar .body .cell:last-child {
+border-right: none;
+}
+.calendar .body .cell .number {
+position: absolute;
+font-size: 82.5%;
+line-height: 1;
+top: .75em;
+right: .75em;
+font-weight: 700;
+}
+.calendar .body .cell:hover .number, .calendar .body .selected .number   {
+visibility:hidden;
+}
+.calendar .body .disabled {
+background-color: white;
+color: lightgray;
+pointer-events: none;
+}
+.calendar .body .cell .bg {
+font-weight: 700;
+line-height: 1;
+color: black;
+opacity: 0;
+font-size: 2em;
+position: absolute;
+right: 0.1em;
+transition: .25s ease-out;
+letter-spacing: -.07em;
+}
+.calendar .body .cell .beforeToday{
+  background-color: white;
+}
+.calendar .body .cell:hover .bg, .calendar .body .selected .bg  {
+opacity: 0.6;
+transition: .5s ease-in;
+}
+.calendar .body .column {
+flex-grow: 0;
+flex-basis: calc(100%/7);
+width: calc(100%/7);
+}
+.belowCalendarBtn {
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+}
+.belowCalendarBtn input {
+  margin-top: 1em;
+  font-size: 17px;
+  height: 50px;
+  width: 150px;
+  background:  orange linear-gradient(orange,#ff8c00);
+  border: 1px solid #ddd;
+  opacity: 0.75;
+  color: white;
+  font-size: 2;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+/*-----------------TABLES---------------------*/
+.tableBtnContainer {
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+}
+.tableBtnContainer input {
+  font-size: 17px;
+  height: 3em;
+  width: 3em;
+  background:  orange linear-gradient(orange,#ff8c00);
+  border: 1px solid #ddd;
+  opacity: 0.75;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.tableBtnContainer input:last-child {
+  margin-left: 15px;
+}
+.tableBtnContainer input:first-child {
+  margin-right: 15px;
+}
+
+.tableContainer {
+  text-align:center;
+}
+
+.tableTimes {
+  text-align: center;
+  margin-top: 1.5em;
+  display:table;
+  margin-left:auto; 
+  margin-right:auto;
+  width:50%;
+}
+
+
+.tableTimes thead th {
+  background-color:white;
+}
+
+.tableHead {
+  padding:5px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+/*
+.tableTimes tr:nth-child(even) {
+  background-color: rgba(0,128,0, 0.6);
+}*/
+
+.tbodyTd {
+  padding:12px 5px 12px 5px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+/*.tableTimes tr:nth-child(odd) {
+  background-color:rgba(255, 0, 0, 0.6);
+}*/
